@@ -13,6 +13,7 @@
         <th><%= Spree.t(:name) %></th>
         <th><%= Spree.t(:status) %></th>
         <th><%= Spree.t(:stock_movements) %></th>
+        <th><%= Spree.t(:country) %></th>
         <th class="actions"></th>
       </tr>
     </thead>
@@ -25,6 +26,7 @@
           <td><%= display_name(stock_location) %></td>
           <td><span class="state <%= state(stock_location) %>"><%= Spree.t(state(stock_location)) %></span></td>
           <td><%= link_to Spree.t(:stock_movements), admin_stock_location_stock_movements_path(stock_location.id) %> </td>
+          <td><%= stock_location.country %></td>
           <td class="actions actions-2 text-center">
             <%= link_to_edit(stock_location, no_text: true) if can? :create, stock_location %>
             <%= link_to_delete(stock_location, no_text: true) if can? :create, stock_location %>
