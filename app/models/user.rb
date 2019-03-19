@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+	include Spree::UserMethods
+	include Spree::UserAddress
+	include Spree::UserPaymentSource
+
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
