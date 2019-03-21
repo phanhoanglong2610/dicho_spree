@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
-	# include Spree::AuthenticationHelpers
-	include Spree::Core::ControllerHelpers::Auth
-	include Spree::Core::ControllerHelpers::Common
-	include Spree::Core::ControllerHelpers::Order
-	include Spree::Core::ControllerHelpers::Store
-	helper 'spree/base'
+	# def after_sign_in_path_for(resource)
+ #    if spree_current_user.has_spree_role?("admin") || spree_current_user.is_shipper? || spree_current_user.is_staff?
+ #      orders_admin_user_path
+ #    else
+ #      root_path
+ #    end
+ #  end
 end

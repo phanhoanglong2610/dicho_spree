@@ -13,6 +13,12 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+
+  config.address_requires_state = false
+  config.checkout_zone = 'EU_VAT'
+  config.currency = 'VND'
+  country = Spree::Country.find_by_name('Vietnam')
+  config.default_country_id = country.id if country.present?
 end
 
 # Configure Spree Dependencies

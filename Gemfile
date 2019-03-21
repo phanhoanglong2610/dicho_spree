@@ -30,6 +30,7 @@ gem 'pg'
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
+  gem 'binding_of_caller'
 end
 
 # Spree Commerce
@@ -40,3 +41,4 @@ gem 'globalize', github: 'globalize/globalize'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 gem 'spree_globalize', github: 'spree-contrib/spree_globalize', branch: 'master'
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
+# gem 'spree_admin_roles_and_access', github: 'vinsol-spree-contrib/spree_admin_roles_and_access'

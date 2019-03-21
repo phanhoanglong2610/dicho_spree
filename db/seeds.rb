@@ -10,3 +10,7 @@ puts 'CREATED ADMIN USER: ' << user.email
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+# Add sample data
+Spree::Role.create(name: 'staff')
+Spree::Role.create(name: 'shipper')

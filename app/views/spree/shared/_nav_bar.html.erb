@@ -7,6 +7,9 @@
 </nav>
 
 <% if spree_current_user %>
+  <li style="color:white">
+    <%= spree_current_user.email %>
+  </li>
   <li>
     <%= link_to Spree.t(:logout), spree_logout_path, method: :delete %>
   </li>
