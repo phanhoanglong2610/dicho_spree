@@ -42,9 +42,6 @@ module Spree
         can :update, Order do |order, token|
           !order.completed? && (order.user == user || order.token && token == order.token)
         end
-      elsif user.respond_to?(:has_spree_role?) && user.is_staff?
-        can :manage, Order
-        can :read, Product  
       else
         can :display, Country
         can :display, OptionType
@@ -80,8 +77,8 @@ module Spree
 
     def can_manage_cart
       # for orders
-      can :admin, Order
-      can [:modify, :display], Order
+      # can :admin, Order
+      can [:display, :modify], Order
       can [:create, :cart], Order
       can [:admin, :display, :modify], LineItem
       can [:admin, :display, :modify], Adjustment
